@@ -89,6 +89,7 @@ const site: SiteConfig = {
     { path: '/courses/language', labelKey: 'site.nav.language' },
     { path: '/courses/skill', labelKey: 'site.nav.skill' },
     { path: '/franchise', labelKey: 'site.nav.franchise' },
+    { path: '/pricing', labelKey: 'site.nav.pricing' },
     { path: '/about', labelKey: 'site.nav.community' },
   ],
 
