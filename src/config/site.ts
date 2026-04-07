@@ -53,11 +53,16 @@ const site: SiteConfig = {
 
   menuItems: [
     {
-      labelKey: 'site.nav.liberal', path: '/courses/language', activePath: '/courses',
+      labelKey: 'site.nav.language', path: '/courses/language', activePath: '/courses/language',
       dropdown: [
         { path: '/courses/english', labelKey: 'site.nav.english' },
         { path: '/courses/japanese', labelKey: 'site.nav.japanese' },
         { path: '/courses/korean', labelKey: 'site.nav.korean' },
+      ]
+    },
+    {
+      labelKey: 'site.nav.skill', path: '/courses/skill', activePath: '/courses/skill',
+      dropdown: [
         { path: '/courses/presentation', labelKey: 'site.nav.presentation' },
         { path: '/courses/study', labelKey: 'site.nav.study' },
       ]
@@ -81,7 +86,8 @@ const site: SiteConfig = {
   ],
 
   footerLinks: [
-    { path: '/courses/language', labelKey: 'site.nav.liberal' },
+    { path: '/courses/language', labelKey: 'site.nav.language' },
+    { path: '/courses/skill', labelKey: 'site.nav.skill' },
     { path: '/franchise', labelKey: 'site.nav.franchise' },
     { path: '/about', labelKey: 'site.nav.community' },
   ],
