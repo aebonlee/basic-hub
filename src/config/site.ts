@@ -1,6 +1,6 @@
 /**
  * DreamIT Basic Hub - 사이트 설정 파일
- * 어학 학습사이트 허브의 브랜드, 메뉴, 학습사이트 정보를 정의합니다.
+ * 교양/인문 학습사이트 허브의 브랜드, 메뉴, 학습사이트 정보를 정의합니다.
  */
 
 import type { SiteConfig } from '../types';
@@ -8,8 +8,8 @@ import type { SiteConfig } from '../types';
 const site: SiteConfig = {
   id: 'basic-hub',
   name: 'DreamIT Basic Hub',
-  nameKo: '드림아이티 어학학습사이트',
-  description: 'DreamIT Basic Hub - 어학 학습사이트 허브. 영어, 일본어, 한국어 등 3개 어학 학습 플랫폼',
+  nameKo: '드림아이티 교양인문학습사이트',
+  description: 'DreamIT Basic Hub - 교양/인문 학습사이트 허브. 어학, 프레젠테이션, 학습법 등 5개 학습 플랫폼',
   url: 'https://basic-hub.dreamitbiz.com',
   dbPrefix: 'bsh_',
 
@@ -48,15 +48,18 @@ const site: SiteConfig = {
 
   categories: [
     { id: 'language', name: '어학', nameEn: 'Languages', icon: 'fa-solid fa-language', path: '/courses/language' },
+    { id: 'skill', name: '교양/스킬', nameEn: 'Liberal Arts & Skills', icon: 'fa-solid fa-lightbulb', path: '/courses/skill' },
   ],
 
   menuItems: [
     {
-      labelKey: 'site.nav.language', path: '/courses/language', activePath: '/courses/language',
+      labelKey: 'site.nav.liberal', path: '/courses/language', activePath: '/courses',
       dropdown: [
         { path: '/courses/english', labelKey: 'site.nav.english' },
         { path: '/courses/japanese', labelKey: 'site.nav.japanese' },
         { path: '/courses/korean', labelKey: 'site.nav.korean' },
+        { path: '/courses/presentation', labelKey: 'site.nav.presentation' },
+        { path: '/courses/study', labelKey: 'site.nav.study' },
       ]
     },
     {
@@ -78,7 +81,7 @@ const site: SiteConfig = {
   ],
 
   footerLinks: [
-    { path: '/courses/language', labelKey: 'site.nav.language' },
+    { path: '/courses/language', labelKey: 'site.nav.liberal' },
     { path: '/franchise', labelKey: 'site.nav.franchise' },
     { path: '/about', labelKey: 'site.nav.community' },
   ],
@@ -126,6 +129,30 @@ const site: SiteConfig = {
       features: ['TOPIK 대비', '한국 문화 학습', '실전 회화'],
       featuresEn: ['TOPIK prep', 'Korean culture', 'Real conversation'],
       target: '외국인 한국어 학습자, TOPIK 준비생', targetEn: 'Foreign Korean learners, TOPIK candidates',
+    },
+    {
+      id: 'presentation', name: '프레젠테이션', nameEn: 'Presentation', url: 'https://presentation.dreamitbiz.com',
+      icon: 'fa-solid fa-person-chalkboard', color: '#E11D48', category: 'skill',
+      description: 'PPT 디자인, 스피치, 스토리텔링 등 효과적인 발표 기법을 학습합니다.',
+      descriptionEn: 'Learn effective presentation skills including PPT design, speech, and storytelling.',
+      techStack: ['PPT', '스피치', '시각디자인', '스토리텔링'], difficulty: 'beginner',
+      curriculum: ['프레젠테이션 기획', 'PPT 디자인 원칙', '스피치 전달 기법', '데이터 시각화', '영어 프레젠테이션'],
+      curriculumEn: ['Presentation planning', 'PPT design principles', 'Speech delivery', 'Data visualization', 'English presentations'],
+      features: ['실전 발표 연습', '템플릿 제공', '피드백 시스템'],
+      featuresEn: ['Practical presentation practice', 'Template library', 'Feedback system'],
+      target: '직장인, 학생, 발표 준비자', targetEn: 'Professionals, students, presenters',
+    },
+    {
+      id: 'study', name: '공부 잘하는 방법', nameEn: 'Study Methods', url: 'https://study.dreamitbiz.com',
+      icon: 'fa-solid fa-brain', color: '#8B5CF6', category: 'skill',
+      description: '학습법, 기억력 향상, 시간관리, 시험전략 등 효과적인 학습 노하우를 배웁니다.',
+      descriptionEn: 'Learn effective study methods including memory techniques, time management, and exam strategies.',
+      techStack: ['학습법', '기억력', '시간관리', '시험전략'], difficulty: 'beginner',
+      curriculum: ['효과적인 학습법', '기억력 향상 테크닉', '시간관리와 계획', '시험 전략', '자기주도 학습'],
+      curriculumEn: ['Effective study methods', 'Memory enhancement techniques', 'Time management and planning', 'Exam strategies', 'Self-directed learning'],
+      features: ['학습 진단', '맞춤형 학습 플랜', '실전 테스트'],
+      featuresEn: ['Learning assessment', 'Personalized study plans', 'Practice tests'],
+      target: '학생, 수험생, 자기계발 학습자', targetEn: 'Students, exam candidates, self-improvement learners',
     },
   ],
 };

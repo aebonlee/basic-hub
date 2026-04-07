@@ -8,15 +8,16 @@ import type { ReactElement, RefObject } from 'react';
 
 const CATEGORY_DESC_KEYS: Record<string, string> = {
   'language': 'site.home.categoryLanguageDesc',
+  'skill': 'site.home.categorySkillDesc',
 };
 
 const Home = (): ReactElement => {
   const { t, language } = useLanguage();
   useAOS();
 
-  const statSites = useCountUp(3, 1500);
-  const statStudents = useCountUp(200, 2000);
-  const statCategories = useCountUp(1, 1500);
+  const statSites = useCountUp(5, 1500);
+  const statStudents = useCountUp(300, 2000);
+  const statCategories = useCountUp(2, 1500);
   const statCompletion = useCountUp(95, 2000);
 
   return (
