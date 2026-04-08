@@ -48,7 +48,8 @@ const site: SiteConfig = {
 
   categories: [
     { id: 'language', name: '어학', nameEn: 'Languages', icon: 'fa-solid fa-language', path: '/courses/language' },
-    { id: 'skill', name: '교양/스킬', nameEn: 'Liberal Arts & Skills', icon: 'fa-solid fa-lightbulb', path: '/courses/skill' },
+    { id: 'liberal', name: '교양기초', nameEn: 'Liberal Arts Basics', icon: 'fa-solid fa-book-open', path: '/courses/liberal' },
+    { id: 'skill', name: '스킬', nameEn: 'Skills', icon: 'fa-solid fa-lightbulb', path: '/courses/skill' },
   ],
 
   menuItems: [
@@ -58,6 +59,16 @@ const site: SiteConfig = {
         { path: '/courses/english', labelKey: 'site.nav.english' },
         { path: '/courses/japanese', labelKey: 'site.nav.japanese' },
         { path: '/courses/korean', labelKey: 'site.nav.korean' },
+        { path: '/courses/chinese', labelKey: 'site.nav.chinese' },
+      ]
+    },
+    {
+      labelKey: 'site.nav.liberal', path: '/courses/liberal', activePath: '/courses/liberal',
+      dropdown: [
+        { path: '/courses/koreatech', labelKey: 'site.nav.koreatech' },
+        { path: '/courses/ai-sw-intro', labelKey: 'site.nav.aiSwIntro' },
+        { path: '/courses/statistics', labelKey: 'site.nav.statistics' },
+        { path: '/courses/writing', labelKey: 'site.nav.writing' },
       ]
     },
     {
@@ -87,6 +98,7 @@ const site: SiteConfig = {
 
   footerLinks: [
     { path: '/courses/language', labelKey: 'site.nav.language' },
+    { path: '/courses/liberal', labelKey: 'site.nav.liberal' },
     { path: '/courses/skill', labelKey: 'site.nav.skill' },
     { path: '/franchise', labelKey: 'site.nav.franchise' },
     { path: '/pricing', labelKey: 'site.nav.pricing' },
@@ -136,6 +148,66 @@ const site: SiteConfig = {
       features: ['TOPIK 대비', '한국 문화 학습', '실전 회화'],
       featuresEn: ['TOPIK prep', 'Korean culture', 'Real conversation'],
       target: '외국인 한국어 학습자, TOPIK 준비생', targetEn: 'Foreign Korean learners, TOPIK candidates',
+    },
+    {
+      id: 'chinese', name: '실용 중국어', nameEn: 'Practical Chinese', url: '#',
+      icon: 'fa-solid fa-dragon', color: '#DC2626', category: 'language',
+      description: '비즈니스와 일상에서 활용할 수 있는 실용 중국어를 학습합니다.',
+      descriptionEn: 'Learn practical Chinese for business and daily life.',
+      techStack: ['중국어회화', '비즈니스중국어', 'HSK', '중국문화'], difficulty: 'beginner',
+      curriculum: ['중국어 발음과 성조', '기초 회화와 문법', '비즈니스 중국어', 'HSK 대비', '중국 문화 이해'],
+      curriculumEn: ['Chinese pronunciation and tones', 'Basic conversation and grammar', 'Business Chinese', 'HSK preparation', 'Chinese culture understanding'],
+      features: ['발음 교정', '실전 회화', 'HSK 대비'],
+      featuresEn: ['Pronunciation correction', 'Real conversation', 'HSK prep'],
+      target: '중국어 학습자, 비즈니스 종사자', targetEn: 'Chinese learners, business professionals',
+    },
+    {
+      id: 'koreatech', name: '컴퓨팅 사고', nameEn: 'Computational Thinking', url: 'https://koreatech.dreamitbiz.com',
+      icon: 'fa-solid fa-brain', color: '#6D28D9', category: 'liberal',
+      description: '컴퓨팅 사고력과 문제 해결 능력을 키우는 교양 과목입니다.',
+      descriptionEn: 'A liberal arts course to develop computational thinking and problem-solving skills.',
+      techStack: ['컴퓨팅사고', '문제해결', '논리적사고', '알고리즘기초'], difficulty: 'beginner',
+      curriculum: ['컴퓨팅 사고란 무엇인가', '문제 분해와 패턴 인식', '추상화와 알고리즘 설계', '데이터 표현과 분석', '컴퓨팅 사고 프로젝트'],
+      curriculumEn: ['What is computational thinking', 'Problem decomposition and pattern recognition', 'Abstraction and algorithm design', 'Data representation and analysis', 'Computational thinking project'],
+      features: ['비전공자 맞춤', '실생활 문제 해결', '논리적 사고 훈련'],
+      featuresEn: ['Non-CS major friendly', 'Real-life problem solving', 'Logical thinking training'],
+      target: '비전공자, 교양 학습자', targetEn: 'Non-CS majors, liberal arts learners',
+    },
+    {
+      id: 'ai-sw-intro', name: 'AI·SW개론', nameEn: 'AI & SW Introduction', url: '#',
+      icon: 'fa-solid fa-microchip', color: '#2563EB', category: 'liberal',
+      description: 'AI와 소프트웨어의 기본 개념을 교양 수준에서 이해합니다.',
+      descriptionEn: 'Understand the basics of AI and software at a liberal arts level.',
+      techStack: ['AI개론', 'SW개론', '디지털리터러시', '기술트렌드'], difficulty: 'beginner',
+      curriculum: ['소프트웨어의 이해', '인공지능의 기초 개념', '데이터와 알고리즘', 'AI 활용 사례', '미래 기술 트렌드'],
+      curriculumEn: ['Understanding software', 'AI basic concepts', 'Data and algorithms', 'AI use cases', 'Future tech trends'],
+      features: ['비전공자 맞춤', '최신 기술 트렌드', '사례 중심 학습'],
+      featuresEn: ['Non-CS major friendly', 'Latest tech trends', 'Case-based learning'],
+      target: '비전공자, 디지털 리터러시 학습자', targetEn: 'Non-CS majors, digital literacy learners',
+    },
+    {
+      id: 'statistics', name: '통계학 기초', nameEn: 'Statistics Basics', url: '#',
+      icon: 'fa-solid fa-chart-bar', color: '#0891B2', category: 'liberal',
+      description: '데이터 해석과 의사결정을 위한 기초 통계학을 학습합니다.',
+      descriptionEn: 'Learn basic statistics for data interpretation and decision making.',
+      techStack: ['기술통계', '확률', '추론통계', '데이터해석'], difficulty: 'beginner',
+      curriculum: ['통계학이란 무엇인가', '기술통계와 데이터 시각화', '확률과 확률분포', '추론통계와 가설검정', '실생활 데이터 분석'],
+      curriculumEn: ['What is statistics', 'Descriptive statistics and data visualization', 'Probability and distributions', 'Inferential statistics and hypothesis testing', 'Real-life data analysis'],
+      features: ['실습 중심', '데이터 시각화', '실생활 사례'],
+      featuresEn: ['Practice-centered', 'Data visualization', 'Real-life examples'],
+      target: '통계 입문자, 데이터 분석 관심자', targetEn: 'Statistics beginners, data analysis enthusiasts',
+    },
+    {
+      id: 'writing', name: '글쓰기와 소통', nameEn: 'Writing & Communication', url: '#',
+      icon: 'fa-solid fa-pen-nib', color: '#EA580C', category: 'liberal',
+      description: '논리적 글쓰기와 효과적인 소통 능력을 키웁니다.',
+      descriptionEn: 'Develop logical writing and effective communication skills.',
+      techStack: ['논술', '보고서작성', '비즈니스글쓰기', '커뮤니케이션'], difficulty: 'beginner',
+      curriculum: ['글쓰기의 기본 원리', '논리적 사고와 글 구조화', '비즈니스 문서 작성법', '효과적인 커뮤니케이션', '발표와 토론 기술'],
+      curriculumEn: ['Writing fundamentals', 'Logical thinking and structuring', 'Business document writing', 'Effective communication', 'Presentation and discussion skills'],
+      features: ['첨삭 지도', '실전 작문 연습', '토론 학습'],
+      featuresEn: ['Writing feedback', 'Practical writing practice', 'Discussion-based learning'],
+      target: '대학생, 직장인, 글쓰기 향상 희망자', targetEn: 'College students, professionals, writing improvement seekers',
     },
     {
       id: 'presentation', name: '프레젠테이션', nameEn: 'Presentation', url: 'https://presentation.dreamitbiz.com',

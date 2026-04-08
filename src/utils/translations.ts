@@ -174,12 +174,17 @@ export const translations: Record<string, Record<string, unknown>> = {
     site: {
       nav: {
         courses: '강좌',
-        liberal: '교양/인문',
         language: '어학',
-        skill: '교양/스킬',
+        liberal: '교양기초',
+        skill: '스킬',
         english: '영어',
         japanese: '일본어',
         korean: '한국어',
+        chinese: '실용 중국어',
+        koreatech: '컴퓨팅 사고',
+        aiSwIntro: 'AI·SW개론',
+        statistics: '통계학 기초',
+        writing: '글쓰기와 소통',
         presentation: '프레젠테이션',
         study: '공부 잘하는 방법',
         pricing: '요금제',
@@ -193,7 +198,7 @@ export const translations: Record<string, Record<string, unknown>> = {
       home: {
         title: 'DreamIT Basic Hub',
         subtitle: '교양/인문 학습의 새로운 기준',
-        heroDesc: '어학, 프레젠테이션, 학습법 — 교양/인문 5개 학습사이트를 하나의 허브에서 만나보세요.',
+        heroDesc: '어학, 교양기초, 학습법 — 교양/인문 10개 학습사이트를 하나의 허브에서 만나보세요.',
         ctaStart: '강좌 둘러보기',
         ctaFranchise: '사이트 분양 문의',
         statsTitle: 'Basic Hub 현황',
@@ -205,10 +210,11 @@ export const translations: Record<string, Record<string, unknown>> = {
         categoriesSubtitle: '교양과 인문학을 아우르는 체계적인 교육 커리큘럼을 제공합니다',
         categoryCoursesCount: '개 강좌',
         categoryViewAll: '전체 보기',
-        categoryLanguageDesc: '영어, 일본어, 한국어를 체계적으로 학습합니다.',
-        categorySkillDesc: '프레젠테이션, 학습법 등 실용 교양 스킬을 학습합니다.',
+        categoryLanguageDesc: '영어, 일본어, 한국어, 중국어를 체계적으로 학습합니다.',
+        categoryLiberalDesc: '컴퓨팅 사고, AI·SW개론, 통계학, 글쓰기 등 교양기초를 학습합니다.',
+        categorySkillDesc: '프레젠테이션, 학습법 등 실용 스킬을 학습합니다.',
         ctaBottomTitle: '지금 교양/인문 학습을 시작하세요',
-        ctaBottomDesc: '5개 교양/인문 학습사이트에서 체계적인 커리큘럼으로 학습할 수 있습니다.',
+        ctaBottomDesc: '10개 교양/인문 학습사이트에서 체계적인 커리큘럼으로 학습할 수 있습니다.',
         ctaBottomBtn: '강좌 시작하기'
       },
       courses: {
@@ -221,7 +227,8 @@ export const translations: Record<string, Record<string, unknown>> = {
         comingSoon: '준비중',
         categoryTitle: {
           language: '어학 강좌',
-          skill: '교양/스킬 강좌'
+          liberal: '교양기초 강좌',
+          skill: '스킬 강좌'
         }
       },
       difficulty: {
@@ -513,12 +520,17 @@ export const translations: Record<string, Record<string, unknown>> = {
     site: {
       nav: {
         courses: 'Courses',
-        liberal: 'Liberal Arts',
         language: 'Languages',
-        skill: 'Liberal Arts & Skills',
+        liberal: 'Liberal Arts Basics',
+        skill: 'Skills',
         english: 'English',
         japanese: 'Japanese',
         korean: 'Korean',
+        chinese: 'Practical Chinese',
+        koreatech: 'Computational Thinking',
+        aiSwIntro: 'AI & SW Introduction',
+        statistics: 'Statistics Basics',
+        writing: 'Writing & Communication',
         presentation: 'Presentation',
         study: 'Study Methods',
         pricing: 'Pricing',
@@ -532,7 +544,7 @@ export const translations: Record<string, Record<string, unknown>> = {
       home: {
         title: 'DreamIT Basic Hub',
         subtitle: 'A New Standard for Liberal Arts Learning',
-        heroDesc: 'Languages, presentation, study methods — explore 5 liberal arts learning sites all in one hub.',
+        heroDesc: 'Languages, liberal arts basics, study methods — explore 10 learning sites all in one hub.',
         ctaStart: 'Browse Courses',
         ctaFranchise: 'Franchise Inquiry',
         statsTitle: 'Basic Hub Overview',
@@ -544,10 +556,11 @@ export const translations: Record<string, Record<string, unknown>> = {
         categoriesSubtitle: 'We provide a systematic liberal arts and humanities curriculum',
         categoryCoursesCount: ' courses',
         categoryViewAll: 'View All',
-        categoryLanguageDesc: 'Systematically learn English, Japanese, and Korean.',
-        categorySkillDesc: 'Learn practical liberal arts skills including presentation and study methods.',
+        categoryLanguageDesc: 'Systematically learn English, Japanese, Korean, and Chinese.',
+        categoryLiberalDesc: 'Learn computational thinking, AI & SW intro, statistics, and writing.',
+        categorySkillDesc: 'Learn practical skills including presentation and study methods.',
         ctaBottomTitle: 'Start Your Liberal Arts Learning Today',
-        ctaBottomDesc: 'Learn with structured curricula across 5 liberal arts and humanities sites.',
+        ctaBottomDesc: 'Learn with structured curricula across 10 liberal arts and humanities sites.',
         ctaBottomBtn: 'Get Started'
       },
       courses: {
@@ -560,7 +573,8 @@ export const translations: Record<string, Record<string, unknown>> = {
         comingSoon: 'Coming Soon',
         categoryTitle: {
           language: 'Language Courses',
-          skill: 'Liberal Arts & Skills Courses'
+          liberal: 'Liberal Arts Basics Courses',
+          skill: 'Skills Courses'
         }
       },
       difficulty: {
