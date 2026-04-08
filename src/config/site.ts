@@ -186,7 +186,7 @@ const site: SiteConfig = {
       target: '비전공자, 디지털 리터러시 학습자', targetEn: 'Non-CS majors, digital literacy learners',
     },
     {
-      id: 'statistics', name: '통계학 기초', nameEn: 'Statistics Basics', url: '#',
+      id: 'statistics', name: '통계학 기초', nameEn: 'Statistics Basics', url: 'https://statistics.dreamitbiz.com',
       icon: 'fa-solid fa-chart-bar', color: '#0891B2', category: 'liberal',
       description: '데이터 해석과 의사결정을 위한 기초 통계학을 학습합니다.',
       descriptionEn: 'Learn basic statistics for data interpretation and decision making.',
