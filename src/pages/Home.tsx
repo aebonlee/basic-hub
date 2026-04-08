@@ -8,6 +8,7 @@ import type { ReactElement, RefObject } from 'react';
 
 const CATEGORY_DESC_KEYS: Record<string, string> = {
   'language': 'site.home.categoryLanguageDesc',
+  'liberal': 'site.home.categoryLiberalDesc',
   'skill': 'site.home.categorySkillDesc',
 };
 
